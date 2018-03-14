@@ -1,18 +1,26 @@
-post = {}
-print("ジャンルを入力してください:")
-post["genre"] = input()
+print("レビュー数:0")
+print("[0]レビューを書く")
+print("[1]レビューを読む")
+print("[2]アプリを終了する")
+user_input = int(input())
+# インデントは2つでもいい
 
-print("タイトルを入力してください:")
-post["title"] = input()
+if user_input == 0:
+  post = {}
+  print("ジャンルを入力してください:")
+  post["genre"] = input()
+  print("タイトルを入力してください:")
+  post["title"] = input()
+  print("レビューを入力してください:")
+  post["review"] = input()
+  line = "\n---------------------------"
 
-print("レビューを入力してください:")
-post["review"] = input()
-line = "---------------------------"
-
-print("ジャンル : " + post["genre"])
-print(line)
-print("タイトル : " + post["title"])
-print(line)
-print("感想 :")
-print(post["review"])
-print(line)
+  print("ジャンル : " + post["genre"] + line)
+  print("タイトル : " + post["title"] + line)
+  print("感想 : " + post["review"] + line)
+elif user_input == 1:
+  pass
+elif user_input == 2:
+  pass
+else:
+  print("入力された値は無効な値です")
